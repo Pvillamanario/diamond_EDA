@@ -5,61 +5,45 @@ Diamonds features exploration data analysis and visualization.
 
 This repository correspond to the data exploration project performed at IRONHACK Data Analysis Bootcamp.
 
-This pipeline completes data acquisition, wrangling, analysis and reporting tasks to process information about the vote 
-intention concerning the Basic Income issue on a poll carried out around the European Union. 
+The original dataset can be found at [Kaggle](https://www.kaggle.com/shivam2503/diamonds).
 
-This is a MVP and not all data correspond to reality.
-
-![Image](./__trash/dmnds.jpg)
+![Image](https://media.tiffany.com/is/image/tiffanydm/GuideToDiamonds_LP_Hero_Desktop_v2-2?$tile$&wid=2992)
 
 ---
-#### **Usage**
-Pipeline is launched through main_script.py giving as paramenters:
-- `-c / --country` - an European country.
-- `-p / --path`    - raw database path.
-- `-e / --email`   - PDF report receiver via email.
-- `-hs / --hashtag` - hashtag about Basic Income based on language - Text, location, date/time) **beta**.
+#### **Purpose**
 
-Example:
-`python main_script.py -p ./data/raw/raw_data_project_m1.db -e pvillamanario@gmail.com -c Spain -hs rentabasica`
+The project scope is to practice exploration, analysis and visualization of a unknown dataset to find key features and relationships.
 
+It is split in two parts:
+    - Dataset analysis performed on Jupyter Notebook.
+    - Tableau interactive dashboard hosted in [Tableau Public](https://public.tableau.com/profile/pablo5039#!/vizhome/Diamonds_15959547286880/Dashboard15?publish=yes).
 
-### **Inputs**
+The parameters included in the dataset are:
 
-- Raw database containing poll data.
-- API calls to retrieve job titles according to ID.
-- Web scraping to get country names from country codes.
+* **Carat**:  diamond weight
+* **Cut**:  cut quality
+* **Color**:  color
+* **Clarity**:  diamond clarity and inclusions
+* **Depth**:  relationship between z, x and y: z/mean(x+y). Depth refers to the distance between the culet and the table when the diamond is viewed from the side.
+* **Table**:  top horizontal facet, expressed as the relationship with the average girdle diameter. Excellent quality -> 52-62% 
+* **Price**  
+* **X**:  diamond length
+* **Y**:  diamond width
+* **Z**:  diamond height
 
----
-### **Processing stages**
+Since this analysis will be used later to train a machine learning algorithm able to predict a diamond price,
+Price is the kye feature that guides the data exploration.
 
-#### **Acquisition**
+### **Tech stack**
 
-- [Data base](https://github.com/Pvillamanario/basic_income_EU_analysis/blob/master/data/raw/raw_data_project_m1.db) connection throuhg SQLAlchemy.
-- Data base data retrieved with pandas.
-- Job titles obtained with an [API](http://dataatwork.org/data/) call.
-- Country codes info got from [EuroStat](https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Country_codes) with requests and ReGex.
-
-#### **Wrangling**
-- Data combined, cleaned and normalized with pandas.
-- Clean .csv as output.
-  
-#### **Analysis**
-As requested, given one country or all of them, three .csv output containing:
-- Country, gender, job, number of people surveyed and % referred to total.
-- Vote intention and number of pro and against arguments.
-- Top jobs by quantity according to education level.
-  
-#### **Reporting**
-With the previous analysis performed:
-- Charts generated for each of the analysis with seaborn.
-- Charts grouped as PDF file using PIL.
-- Report sent as attachment to de email address passed as  with SMTP lib.
-- \#BasicIncome tweets with text, location and date/time.
-
-  
+- Analysis performed on Jupyter Notebook.
+- Used libraries:
+    - numpy
+    - pandas
+    - matplotlib
+    - seaborn
+    - plotly
+      
 ---
 ### **:To be completed...:**
-- Passing a selection of countries as arguments.
-- Refactor and improve (a lot) file management, titles, country filter...
-- ~~Improve~~ Re do the charts so they can be shown to the world...
+- A/B testing.
