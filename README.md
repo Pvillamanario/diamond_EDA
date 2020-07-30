@@ -15,8 +15,8 @@ The original dataset can be found at [Kaggle](https://www.kaggle.com/shivam2503/
 The project scope is to practice exploration, analysis and visualization of a unknown dataset to find key features and relationships.
 
 It is split in two parts:
-    - Dataset analysis performed on Jupyter Notebook.
-    - Tableau interactive dashboard hosted in [Tableau Public](https://public.tableau.com/profile/pablo5039#!/vizhome/Diamonds_15959547286880/Dashboard15?publish=yes).
+   * Dataset analysis performed on Jupyter Notebook.
+   * Tableau interactive dashboard hosted in [Tableau Public](https://public.tableau.com/profile/pablo5039#!/vizhome/Diamonds_15959547286880/Dashboard15?publish=yes).
 
 The parameters included in the dataset are:
 
