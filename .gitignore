@@ -1,6 +1,6 @@
 #
-__trash
-.idea
+__trash/
+.idea/
 
 
 # Byte-compiled / optimized / DLL files
