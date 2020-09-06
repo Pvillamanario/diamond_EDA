@@ -50,6 +50,7 @@ Top diamonds are super rare to find and usually, a lot of material is wasted to 
 - Analysis performed on Jupyter Notebook.
 - Used libraries:
     - numpy
+    - scipy
     - pandas
     - matplotlib
     - seaborn
